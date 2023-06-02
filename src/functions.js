@@ -29,7 +29,23 @@ function getHighestIndex(array) {
    return higherNumberIndex;
 }
 // Requisito 3 - Crie a função getSmallestIndex
-
+function getSmallestIndex(array) {
+  let smallestNumber;
+  let semallestNumberIndex;
+  
+   for(i=0;i<array.length;i+=1) {
+     if (i===0){
+         smallestNumber = array[i];
+         smallestNumberIndex = i;
+     } else {
+        if (array[i]<smallestNumber) {
+            smallestNumber = array[i];
+            smallestNumberIndex = i;
+        }
+     }
+   };
+   return smallestNumberIndex;
+}
 // Requisito 4 - Crie a função getLongestWord
 
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
