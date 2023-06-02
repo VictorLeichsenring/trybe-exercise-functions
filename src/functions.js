@@ -11,7 +11,23 @@ function verifyPalindrome (word) {
   }
 }
 // Requisito 2 - Crie a função getHighestIndex
-
+function getHighestIndex(array) {
+  let higherNumber;
+  let higherNumberIndex;
+  
+   for(i=0;i<array.length;i+=1) {
+     if (i===0){
+         higherNumber = array[i];
+         higherNumberIndex = i;
+     } else {
+        if (array[i]>higherNumber) {
+            higherNumber = array[i];
+            higherNumberIndex = i;
+        }
+     }
+   };
+   return higherNumberIndex;
+}
 // Requisito 3 - Crie a função getSmallestIndex
 
 // Requisito 4 - Crie a função getLongestWord
