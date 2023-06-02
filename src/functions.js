@@ -47,7 +47,21 @@ function getSmallestIndex(array) {
    return smallestNumberIndex;
 }
 // Requisito 4 - Crie a função getLongestWord
+function getLongestWord(array) {
 
+  let longestWord;
+  
+  for(i=0;i<array.length;i+=1) {
+      if (i===0){
+          longestWord = array[i];
+      } else {
+          if (array[i].length>longestWord.length) {
+              longestWord = array[i];
+          }
+      }
+  };
+  return longestWord;
+}
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
 
 // Não modifique as linhas abaixo
