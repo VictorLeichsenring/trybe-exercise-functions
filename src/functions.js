@@ -63,7 +63,25 @@ function getLongestWord(array) {
   return longestWord;
 }
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
-
+function countHighestNumberMaxOccurrences(array) {
+  let higherNumber;
+  let numberOfOccurrences;
+  
+  for (i=0;i < array.length; i +=1) {
+      if (i===0) {
+          higherNumber = array[i];
+          numberOfOccurrences = 1;
+      } else {
+          if (higherNumber === array[i]) {
+              numberOfOccurrences +=1;
+          } else if (array[i] > higherNumber) {
+              higherNumber = array[i];
+              numberOfOccurrences = 1;
+          };
+      };
+  };
+  return numberOfOccurrences;
+}
 // Não modifique as linhas abaixo
 module.exports = {
   verifyPalindrome: typeof verifyPalindrome === 'function' ? verifyPalindrome : (() => {}),
