@@ -1,5 +1,15 @@
 // Requisito 1 - Crie a função verifyPalindrome
-
+function verifyPalindrome (word) {
+  let reverseWord = '';
+  for (i=word.length-1;i>=0;i-=1) {
+    reverseWord += word[i]
+  }
+  if (word === reverseWord) {
+    return true;
+  } else {
+    return false;
+  }
+}
 // Requisito 2 - Crie a função getHighestIndex
 
 // Requisito 3 - Crie a função getSmallestIndex
